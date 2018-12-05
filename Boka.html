@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>Bokning</title>
+</head>
+
+<body>
+	<!-- Header content -->
+	<header class="header">
+		<a href="index.html"><img class="head-bild" src="xstadbilder/header-logga.png" alt="header logga"></a>
+		<!-- Navigerings Menyn -->
+		<nav>
+			<ul class="meny">
+				<li><a href="index.html"><i class="material-icons" id="hem-logga">home</i></a></li>
+				<li><a href="Events.html">Events</a></li>
+				<li><a href="Boka.html" class="active">Boka</a></li>
+				<li><a href="#tider">Öppettider</a></li>
+				<!-- <li><a href="index.html#information-nyheter">Om</a></li> -->
+				<li><a href="#contact">Kontakt</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- All content i mitten -->
+	<main>
+		<div class="bokning-content">
+			<div class="form">
+				<h2>Boknings formulär</h2>
+				<form>
+					<fieldset>
+					  <legend> Boka lokal</legend>
+					  <label for="select"> Välj vilken lokal vill du boka:  </label> <br>
+						<select id="select">
+							<option>Danslokal</option>
+							<option>Lilla teatern</option>
+							<option>Stora teatern</option>
+							<option>Musikstudio</option>
+							<option>Konferans</option>
+						</select> <br>
+						<label for="fnamn">Förnamn:</label>
+						<input type="text" name="fnamn" id="fnamn"><br>
+						<label for="enamn">Efternamn:</label>
+						<input type="text" name="enamn" id="enamn"> <br>
+						<label for="tele">Telefon: </label>
+						<input type="tel" name="tele" id="tele"> <br>
+						<label for="mail">E-postadress: </label>
+						<input type="email" name="mail" id="mail"> <br>
+						<label for="tid">Datum: </label>
+						<input type="date" name="tid" id="tid"> <br>
+						<label for="ovrigt">Övriga kommenterarer: </label> <br>
+						<textarea id="ovrigt" name="ovrigt" 
+								  rows="5" cols="33">Övriga kommenterarer här..</textarea>
+					</fieldset>
+				</form>
+			</div>
+			<button class="knapp" type="button">Boka</button>
+			<div class="lokal-bilder">
+				<img src="xstadbilder/Konferans-lokal.jpg" alt="konferans">
+				<img src="xstadbilder/Danslokal.jpg" alt="Danslokal">
+				<img src="xstadbilder/Liten-teater.jpeg" alt="Lilla teatern">
+				<img src="xstadbilder/Stora-teatern.jpg" alt="Stora teatern">
+				<img src="xstadbilder/Musik-studio.jpg" alt="Musik studio">
+			</div>
+		</div>
+	</main>
+	<!-- Content längst ner. -->
+	<footer>
+		<!-- Kontaktinformationen använder små loggor med. -->
+		<div id="contact">
+			<h2>Kontakta oss</h2>
+			<p><i class="material-icons">phone</i> 0707-070707</p>
+			<p><i class="material-icons">mail</i> info@kulturhuset.se</p>
+			<p><i class="material-icons">location_on</i> Kulturvägen 54, 412 66 X-stad, Sverige</p>
+		</div>
+		<div id="tider">
+			<h2>Öppettider</h2>
+			<p>Måndag-torsdag: 08.00-20.00</p>
+			<p>Fredag-lördag: 10.00-22.00</p>
+			<p>Söndag: 10.00-20.00</p>
+			<p>Kan vara öppet längre under speciella dagar.</p>
+		</div>	
+	</footer>
+</body>
+</html>
