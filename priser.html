@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="sv">
+<head>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<meta charset="utf-8">
+<title>Namnlöst dokument</title>
+</head>
+<body>
+	<header class="header">
+			<nav class="nav" id="nav">
+				<span class="meny-mobil" id="js-meny-logga">
+						<i class="fas fa-bars"></i>
+				</span>
+				<a href="index.html" class="logga">X-GYM</a>
+				<ul class="nav-meny" id="js-mobil">
+					<li>
+						<a href="priser.html" class="meny-lank">Priser</a>
+					</li>
+					<li>
+						<a href="boka.html" class="meny-lank">Boka</a>
+					</li>
+					<li>
+						<a href="kampanjer.html" class="meny-lank">Erbjudande</a>
+					</li>
+					<li>
+						<a href="faq.html" class="meny-lank">FAQ</a>
+					</li>
+					<li>
+						<a href="#footer" class="meny-lank">Kontakta oss</a>
+					</li>
+				</ul>
+			<div class="header-knappar">
+				<button class="meny-lank modal-button" id="logga-in" name="#myModal2">Logga in</button>
+				<button class="modal-button" id="bli-medlem" name="#myModal1">Bli medlem</button>
+			</div>
+			</nav>
+	</header>
+
+	<main class="main">
+			<!--Bilderna för headern-->
+			<div class="meny-bilder">
+				<img src="bilder/gymverktyg.jpeg" alt="Banner bild">
+					<div class="meny-title"><h2>Priser</h2>
+					</div>
+			</div>
+			<div class="pris-container">
+					<div class="pris-main">
+						<ul class="pris">
+							<li class="pris-header">1 Månad</li>
+							<li class="list-box">650 Kr</li>
+							<li>Reservera gruppträning</li>
+							<li>Fri tillgång till gymmet</li>
+							<li>Fri tillgång till gruppträning</li>
+							<li>10% Rabatt i affären</li>
+							<li class="list-box"><button class="ansokan-knapp" id="1mon">Ansökan</button></li>
+						</ul>
+					</div>
+					<div class="pris-main">
+						<ul class="pris">
+							<li class="pris-header">6 Månad</li>
+							<li class="list-box">550 Kr / Månad</li>
+							<li>Samma som 1 Månad</li>
+							<li>Gym intro</li>
+							<li>1 gratis pass med PT</li>
+							<li>20% Rabatt i affären</li>
+							<li class="list-box"><button class="ansokan-knapp" id="6mon">Ansökan</button></li>
+						</ul>
+					</div>
+					<div class="pris-main">
+						<ul class="pris">
+							<li class="pris-header">1 år</li>
+							<li class="list-box">450 Kr / Månad</li>
+							<li>Samma som 6 månader</li>
+							<li>4 gratis pass med PT</li>
+							<li>2 gratis tider med Dietist</li>
+							<li>30% Rabatt i affären</li>
+							<li class="list-box"><button class="ansokan-knapp" id="12mon">Ansökan</button></li>
+						</ul>
+					</div>
+				</div>
+				<h2 class="onetime-pris">150 kr inträde, 200 kr för gruppträning om plats finns.</h2>
+				<div id="medlemsskap">
+					<h2 class="ansokan-title">Ansökan om medlemsskap här, så hör vi av oss.</h2>
+					<div id="laddare"></div>
+					<form class="ansokan" action="#" onsubmit="return prisValidering()" method="POST">
+						<div>
+							<label for="fnamn">Förnamn:</label>
+							<input type="text" id="fnamn" name="fnamn">
+						</div>
+						<div>
+							<label for="enamn">Efternamn:</label>
+							<input type="text" id="enamn" name="enamn">
+						</div>
+						<div>
+							<label for="pnummer">Född:</label>
+							<input type="date" id="pnummer" name="pnummer">
+						</div>
+						<div>
+							<label for="epost">E-post:</label>
+							<input type="email" id="epost" name="epost">
+						</div>
+						<div>
+							<label for="tele">Telefon:</label>
+							<input type="number" id="tele" name="tele">
+						</div>
+						<div>
+							<label for="tid">Medlemsval:</label>
+							<select name="tid" id="tid">
+								<option value="1">1 månad</option>
+								<option value="2">6 månader</option>
+								<option value="3" selected>1 år</option>
+							</select>
+						</div>
+						<div>
+							<label for="txtmsg">Meddelande:</label>
+							<textarea id="txtmsg" name="txtmsg"></textarea>
+						</div>
+						<div class="medlemsskap-knapp">
+							<button id="ansokknappen" type="submit">Ansök</button>
+						</div>
+					</form>
+				</div>
+  </main>
+	<footer class="footer" id="footer">
+		<div class="mailform">
+			<h2 class="kontakt-title">Kontakta oss</h2>
+			<div id="kontakt-laddare"></div>
+			<form class="form" onsubmit="return testaForm()" action="#" method="POST">
+					<p><input id="kontaktnamn" type="text" name="kontaktnamn" placeholder="Namn"></p>
+					<p><input id="kontaktemail" type="email" name="kontaktemail" placeholder="E-mail"></p>
+					<p><textarea name="kontakttxtarea" class="txtarea" id="kontakttxtarea" placeholder="Skriv ditt meddelande här"></textarea></p>
+					<p><input class="kontakt-knapp" type="submit" value="Skicka"></p>
+			</form>
+		</div>
+		<div class="kontakt">
+			<p><i class="fas fa-phone"></i> 080-08080808</p>
+			<p><i class="fas fa-envelope"></i> info@xgym.se</p>
+			<p><i class="fas fa-map-marker-alt"></i>Xstadgatan 8 <br> 123 45 Xstad</p>
+			<p><i class="fas fa-map-marker-alt"></i>Ystadgatan 77 <br> 123 45 Ystad</p>
+		</div>
+		<div class="social">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+		</div>
+
+	</footer>
+	<div id="myModal2" class="modal">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<span class="close">×</span>		
+		<h2 class="login-header">LOGGA IN</h2>
+		</div>
+			<div id="login-laddare"></div>
+      <form id="login-form" onsubmit="return testaLogin()" action="#" method="POST">
+		  <p><input type="email" id="loginemail" placeholder="E-mail"></p>
+		<p><input type="password" id="loginpassword" placeholder="Lösenord"></p>
+		<p><input class="form-login-knapp" type="submit" value="Logga in"></p>
+		<p><a href="#" class="glomt-losenord">Glömt lösenord</a></p>
+    	</form>
+	  </div>
+	</div>
+	<div id="myModal1" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">×</span>		
+				<h2 class="reg-header">BLI MEDLEM</h2>
+				</div>
+				<div id="register-laddare"></div>
+				<form id="register-form" onsubmit="return testaRegister()" action="#" method="POST">
+						<p><input class="for-efternamn" id="registerfnamn" type="text" placeholder="Förnamn"></p>
+						<p><input class="for-efternamn" id="registerenamn" type="text" placeholder="Efternamn"></p>
+						<p><input type="email" id="registeremail" placeholder="E-mail"></p>
+						<p><input type="password" id="onepassword" placeholder="Lösenord"></p>
+						<p><input type="password" id="twopassword" placeholder="Lösenord igen"></p>
+						<p><input class="form-register-knapp" type="submit" value="Bli medlem"></p>
+					</form>
+			</div>
+		</div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -41,26 +41,27 @@
 	<main class="main">
 			<!--Bilderna för headern-->
 			<div class="meny-bilder">
-				<img src="bilder/bokaheaderbak.jpeg" alt="Banner bild">
-					<div class="meny-title"><h2>Boka pass</h2>
-			  	</div>
+				<img src="bilder/erbjudande.jpeg" alt="bild på banner">
+					<div class="meny-title"><h2>Kampanjer</h2></div>
 			</div>
-			<div class="boka-title">
-				<h2>Boka dina gruppträningspass här!</h2>
-				<p>med månadskort på vårat gym är dina gruppträningar gratis, annars kostar det 200kr i kassan.</p>
-				<p>Var här 10 minuter innan eller så blir du avbokad.</p>
-				<p>Klicka på knappen nedan för att ta dig till bokningssidan</p>
-			<form>
-				<button formaction="https://www.timecenter.se/xgym/" class="boka-knapp">Boka</button>
-			</form>
+			<div class="gratis-traning" id="gratistraning">
+				<h2 class="traning-title">Just nu erbjuder vi gratis träning i en vecka</h2>
+				<p class="traning-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo turpis odio, sit amet volutpat tellus facilisis eget. Sed vestibulum metus at nisl pharetra molestie. Vivamus tempor dignissim turpis nec suscipit. Proin non scelerisque enim. Cras a ipsum ac sapien commodo gravida a sit. </p>
 			</div>
-			<div class="schema">
-					<h2 class="schema-title">Schema</h2>
-					<iframe class="kalender" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=0eafs2kjlaspf0rv3vfii0rh2k%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Europe%2FStockholm" style="border-width:0" width="800" height="600"></iframe>
+			<div class="monadskort">
+				<h2 class=traning-title>Rabatt i affären för dig med månadskort</h2>
+				<p class="traning-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mi sed felis tempor efficitur in at justo. Maecenas vitae ipsum non mi vestibulum ullamcorper non eget enim. Etiam gravida leo neque, at condimentum enim commodo in. Vestibulum id lacus sed odio blandit placerat in ac orci. Aenean iaculis, leo vitae eleifend laoreet, tellus sem iaculis ligula, et faucibus lectus tortor sed ante. Cras lacinia. </p>
 			</div>
-		</main>
-					<!-- Footer start -->
-		<footer class="footer" id="footer">
+			<div class="ta-med">
+				<h2 class="traning-title">Ta med en vän gratis</h2>
+				<p class="traning-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis, odio sit amet sollicitudin cursus, dui nibh euismod orci, vitae ultrices diam ante sit amet erat. In aliquet ut magna vitae varius. Pellentesque et tortor non nibh condimentum egestas et nec leo. Ut tempor a odio eu lacinia. Sed maximus lobortis est, ultricies ullamcorper lacus.* </p>
+			</div>
+			<div class="mer-erbjudande">
+				<h3>Mer erbjudanden kommer snart...</h3>
+			</div>
+    </main>
+	<footer class="footer" id="footer">
 		<div class="mailform">
 			<h2 class="kontakt-title">Kontakta oss</h2>
 			<div id="kontakt-laddare"></div>
@@ -90,21 +91,21 @@
 		<span class="close">×</span>		
 		<h2 class="login-header">LOGGA IN</h2>
 		</div>
-		<div id="login-laddare"></div>
-    <form id="login-form" onsubmit="return testaLogin()" action="#" method="POST">
-	  	<p><input type="email" id="loginemail" placeholder="E-mail"></p>
-			<p><input type="password" id="loginpassword" placeholder="Lösenord"></p>
-			<p><input class="form-login-knapp" type="submit" value="Logga in"></p>
-			<p><a href="#" class="glomt-losenord">Glömt lösenord</a></p>
-    </form>
+			<div id="login-laddare"></div>
+      <form id="login-form" onsubmit="return testaLogin()" action="#" method="POST">
+				<p><input type="email" id="loginemail" placeholder="E-mail"></p>
+				<p><input type="password" id="loginpassword" placeholder="Lösenord"></p>
+		<p><input class="form-login-knapp" type="submit" value="Logga in"></p>
+		<p><a href="#" class="glomt-losenord">Glömt lösenord</a></p>
+    	</form>
 	  </div>
 	</div>
 	<div id="myModal1" class="modal">
 		<div class="modal-content">
 			<div class="modal-header">
-				<span class="close">×</span>		
+				<span class="close">×</span>
 				<h2 class="reg-header">BLI MEDLEM</h2>
-				</div>
+			</div>
 			<div id="register-laddare"></div>
 			<form id="register-form" onsubmit="return testaRegister()" action="#" method="POST">
 				<p><input class="for-efternamn" id="registerfnamn" type="text" placeholder="Förnamn"></p>
@@ -114,8 +115,8 @@
 				<p><input type="password" id="twopassword" placeholder="Lösenord igen"></p>
 				<p><input class="form-register-knapp" type="submit" value="Bli medlem"></p>
 			</form>
-			</div>
 		</div>
+	</div>
 <script src="main.js"></script>
 </body>
 </html>

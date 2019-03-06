@@ -1,218 +1,887 @@
-@charset "utf-8";
-/* CSS Document */
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body {
-	font-family: "Helvetica", "Arial", sans-serif;
-	font-size: 16px;
-	margin: 0;
-	/* background-color: #fb4f4f;
-	background-image: url("xstadbilder/3px-tile.png"); */
-	/* color:#002e5b; */
-	color: #002e5b;
-	background-color: #eee;
-	line-height: 1.5em;
+
+a {
+    text-decoration: none;
+    color: white;
+}
+html {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #32325d;
+}
+
+h1, h2, h3 {
+    color: #2f97ff;
+}
+
+.nav {
+    padding-bottom: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    transition: top 0.3s;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+}
+
+.nav-meny {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-meny li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.meny-lank {
+    color: #2f97ff;
+    text-decoration: none;
+}
+
+#logga-in {
+    background-color: #2f97ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+#logga-in:hover {
+    opacity: 0.7;
+    color: orange;
+}
+
+#bli-medlem {
+    display: none;
+    background-color: #2f97ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+
+#bli-medlem:hover {
+    opacity: 0.7;
+    color: orange;
+}
+
+.meny-mobil {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.active {
+    display: block;
+}
+
+.logga  {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #2f97ff;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+    border-bottom: 1px solid black;
+}
+
+.banner-bild img {
+    max-height: 600px;
+    width: 100%;
+    opacity: 0.9;
+    position: relative;
+    top: 70px;
+    margin-bottom: 70px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.bild-medlem {
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: #2f97ff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0;
+}
+
+.bild-medlem:hover {
+    opacity: 0.7;
+    color: orange;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.medlemskap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    background-color: #fff;
+    max-width: 80%;
+    width: 900px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15)
 
 }
-header .head-bild {
-	display: block;
-	margin: 0 auto;
-	max-height: 150px;
-	max-width: 100%;
+.medlem {
+    max-width: 350px;
+    margin: 20px 30px;
 }
-.meny {
-	display: flex;
-	justify-content: center;
-	font-size: 1.2em;
-	padding: 0.5em 0em;
-	background-color: #fb4f4f;
-	background-image: url("xstadbilder/3px-tile.png");
-	margin: 0.5em auto;
-	list-style-type: none;
-	align-items: center;
+.medlem p {
+    padding-top: 10px;
+    font-size: 20px;
 }
-.meny a {
-	margin-left: 30px;
-	color: #f2f2f2;
-	text-decoration: none;
-	font-size: 1.2em;
+
+.prov {
+    max-width: 350px;
+    margin: 20px 30px;
 }
-.meny .mobil {
-	display: none;
+.prov p {
+    font-size: 20px;
+    padding-top: 10px;
 }
-.meny a:hover {
-	color: black;
+.nyheter-title {
+    text-align: center;
+    color: #2f97ff;
+    border-bottom: 1px solid #fff;
+    width: 1100px;
+    align-self: center;
 }
-.meny a.active {
-	color: black;
+.nyheter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.meny #hem-logga {
-	font-size: 1.5em;
-	padding-top: 5px;
+.nyheter p {
+    margin: 10px auto;
 }
- /* .meny .search {
-	margin-left: 100px;
-} */
-.box p {
-	max-width: 800px;
+.nyheter h3 {
+    margin-top: 10px;
 }
-.box a {
-	text-decoration: none;
+
+.first-nyhet, .second-nyhet {
+    background: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    text-align: center;
+    margin: 20px 50px;
+    overflow: hidden;
+    
 }
-.box {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	text-align: center;
-	
+.nyhet-img {
+    max-width: 700px;
+    width: 500px;
+    max-height: 350px;
+    transition: transform .2s;
 }
-.information-nyheter {
-	margin-right: 20px;
+.nyhet-img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(1.05);
 }
-.framsida-kulturhus {
-	max-height: 400px;
-	border: 1px solid #999;
-	background-color: #fcfcfc;
-	padding: 4px;
+.text-nyhet  {
+    max-width: 500px;
 }
-.schema {
-	/* background-color: rgba(108,192,229, 0.6);
-	border: 3px solid #000; */
+.las-mer, .boka-knapp {
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    background-color: #2f97ff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+    margin: 0px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+
 }
-.veckoplanering ul{
-	list-style-type: none;
+.Las-mer:hover, .boka-knapp:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    color: orange;
 }
-.veckoplanering li {
-	padding-right: 10px;
+
+.boka-traning {
+    text-align: center;
+    margin: 20px auto;
+    border-bottom: 1px solid #fff;
+    max-width: 900px;
 }
-#nyheter {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	font-weight: 600;
-	text-align: center;
+
+.boka-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    width: 100%;
+    justify-content: center;
 }
-#nyheter img {
-	max-height: 200px;
-	max-width: 220px;
-	padding-top: 10px;
+
+.boka {
+    display: flex;
+    padding: 16px;
+    margin-bottom: 30px;
+    max-width: 400px;
 }
-#nyheter .teater-nyhet {
-	background-color: rgba(108,192,229, 0.6);
-	border: 3px solid #000;
-	margin-left: 30px;
-	max-width: 300px;
+
+.boka-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    overflow: hidden;
+    transition: transform 0.5s;
 }
-#nyheter .cafe-nyhet {
-	background-color: rgba(108,192,229, 0.6);
-	border: 3px solid #000;
-	margin-left: 30px;
-	max-width: 300px;
+
+.boka-item:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
-#nyheter .pyssel-nyhet {
-	background-color: rgba(108,192,229, 0.6);
-	border: 3px solid #000;
-	margin-left: 30px;
-	max-width: 300px;
+
+.boka-bild {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 6px 6px 0px 0px;
+    opacity: 0.9;
 }
+
+.boka-bild:hover {
+    opacity: 1;
+}
+
+.bild-info {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.bild-title {
+    font-size: 25px;
+    line-height: 18px;
+    color: #2f97ff;
+    margin-bottom: 5px;
+}
+
 footer {
-	display: flex;
-	flex-wrap: wrap;
-	text-align: center;
-	justify-content: center;
-	padding: 20px;
-	border: 1px solid #6cc0e5;
-	background-color: #fb4f4f;
-	background-image: url("xstadbilder/3px-tile.png");
-	color: #eee;
-}
-footer #contact {
-	margin-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    background-color:  #fff;
+    padding-top: 30px;
 }
 
-/* Event sidan */
+.kontakt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    width: 400px;
+}
+.kontakt p {
+    padding-bottom: 20px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+    font-size: 20px;
+    background-color: #fefefe;
+    width: 400px;
+}
+.form input {
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+}
 
-.events {
-	display: flex;
-	flex-direction: column;
-	height: auto;
-	width: 100%;
-	text-align: center;
-	list-style-type: none;
-	align-items: center;
-	
-}
-.events img {
-	max-height: 200px;
-	width: 100%;
-}
-.events li {
-	border-bottom: 1px solid blue;
-	
-}
-.events p {
-	max-width: 900px;
+.form p {
+    padding: 10px;
 }
 
-/* Boknings sida */
+.form input:focus {
+    border-color: black;
+}
 
-.bokning-content {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	width: 100%;
-	align-items: center;
+#kontakt-laddare {
+    position: relative;
+    display: none;
+    left: 30%;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #2f97ff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1.5s linear infinite;
 }
-.lokal-bilder {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin: 20px 20px;
-	width: 100%;
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
-.lokal-bilder img {
-	margin: 10px 10px;
-	max-width: 400px;
+
+.kontakt-knapp {
+    background: #2f97ff;
+    color: #fff;
 }
-.knapp {
-	width: 150px;
-	height: 50px;
-	margin: 10px auto;
-	align-self: center;
-	background-color: #fb4f4f;
-	background-image: url("xstadbilder/3px-tile.png");
-	color: #eee;
-	font-size: 1.2em;
+.kontakt-knapp:hover {
+    cursor: pointer;
+    color: orange;
+    opacity: 0.7;
 }
-.knapp:hover {
-	background-color: #6cc0e5; 
-	color: #002e5b;
+.txtarea {
+    width: 380px;
+    height: 70px;
 }
-.bokning-content textarea {
-	width: 100%;
-	height: 150px;
-	background-color: #f8f8f8;
-	padding: 12px 20px;
-	border: 2px solid #ccc;
-	border-radius: 5px;
+.social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
 }
-.bokning-content select {
-	width: 100%;
-	border-radius: 5px;
-	background-color: #f1f1f1;
+.fab {
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
 }
-.bokning-content input {
-	margin: 10px auto;
+.fa-facebook {
+    background: #3B5998;
+    color: white;
 }
-/* Mobil nav */
-@media screen and (max-width : 600px ){
-	.meny {
-		flex-direction: column; /* Ändrar från standard ROW till column */
-	}
-	header .head-bild {
-		display: none; /* Tar bort header bilden när vi går ner till mobil storlek*/
-	}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+/* Modal bakgrunden */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal laddaren */
+#login-laddare, #register-laddare {
+    position: relative;
+    display: none;
+    left: 35%;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #2f97ff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Modal Content */
+.modal-content {
+    margin: 16px auto;
+    font-size: 20px;
+    background-color: #fefefe;
+    width: 400px;
+    animation-name: animatetop;
+    animation-duration: 1s;
+}
+.modal-content p {
+    padding: 12px;
+}
+.modal-content input {
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;   
+}
+.modal-content input:focus {
+    border-color: black;
+}
+
+.form-login-knapp, .form-register-knapp {
+    background: #2f97ff;
+    color: #fff;
+}
+.form-login-knapp:hover, .form-register-knapp:hover {
+    cursor: pointer;
+    color: orange;
+    opacity: 0.7;
+}
+/* Animation för modalen */
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    background: #2f97ff;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+.modal-header h2 {
+    color: #fff;
+}
+
+.login-form {
+    background: #f8f8f8;
+    padding: 12px;
+}
+
+.glomt-losenord {
+    text-decoration: none;
+    margin-left: 220px;
+    font-size: 15px;
+}
+
+
+/* priser.html */
+
+.meny-bilder {
+    position: relative;
+    text-align: center;
+}
+
+.meny-bilder img {
+    max-height: 350px;
+    width: 100%;
+    opacity: 0.7;
+}
+.meny-title {
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+.meny-title h2 {
+    font-size: 34px;
+}
+
+.pris-container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.pris-main {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.pris {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+.pris:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+.pris-header {
+    background-color: #2f97ff;
+    font-size: 24px;
+}
+.pris li {
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    padding: 10px;
+}
+.list-box {
+    font-size: 20px;
+    background: #eee;
+}
+.onetime-pris {
+    text-align: center;
+}
+
+.ansokan-knapp {
+    background-color: #2f97ff;
+    color: white;
+    height: 35px;
+    font-size: 17px;
+    cursor: pointer;
+    width: 150px;
+    max-width: 150px;
+}
+.ansokan-knapp:hover {
+    color: orange;
+    opacity: 0.7;
+}
+
+.ansokan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.ansokan-title{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    border-top: 4px solid #eee;
+}
+.ansokan input, .ansokan select, .ansokan textarea {
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    display: block;
+}
+#txtmsg {
+    height: 150px;
+}
+.medlemsskap-knapp button {
+    height: 50px;
+    width: 200px;
+    background-color: #2f97ff;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Laddaren med animation aktiveras med någon submit knapp */
+#laddare {
+    position: relative;
+    display: none;
+    left: 45%;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #2f97ff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Boka.html */
+
+.boka-title {
+    text-align: center;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15)
+}
+
+.boka-title h2 {
+    margin: 15px auto;
+}
+
+.boka-knapp {
+    margin-top: 10px;
+}
+
+
+/* Iframe kalendern från google */
+.kalender {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15)
+}
+
+.schema-title {
+    text-align: center;
+    margin: 10px auto;
+    margin-top: 20px;
+}
+
+/* Kampanjer.html */
+
+.gratis-traning, .monadskort, .ta-med {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 2%;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15)
+
+}
+
+.traning-title {
+    margin: 20px auto;
+    text-align: center;
+}
+.traning-text {
+    max-width: 900px;
+}
+.mer-erbjudande {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+/* FAQ.html */
+
+.om-oss {
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    max-width: 1100px;
+    margin: 10px auto;
+}
+
+.om-oss p {
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+.faq-bild {
+    margin: 20px auto;
+    border-radius: 25%;
+}
+.under-rubrik {
+    font-size: 17px;
+    font-weight: bold;
+}
+.regler {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    max-width: 900px;
+}
+.regler h2, .regler h3 {
+    padding: 20px;
+    text-align: center;
+}
+.sakerhet li, .ordning li {
+    padding: 10px;
+    max-width: 500px;
+    margin-left: 20px;
+}
+.sakerhet, .ordning {
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+
+}
+.oppet-tider {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15)
+
+}
+
+.vanliga-oppettider, .speciella-oppettider {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px;
+    text-align: start;
+    
+}
+.vanliga-oppettider h2, .speciella-oppettider h2 {
+    padding: 10px;
+}
+.vanliga-oppettider li, .speciella-oppettider li {
+    padding: 5px;
+}
+
+
+/* nyheter.html */
+
+.senaste-nyheter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#nyhet1, #nyhet2 {
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+#nyhet1 h2, #nyhet2 h2 {
+    margin: 20px auto;
+}
+#nyhet1 p, #nyhet2 p {
+    max-width: 800px;
+}
+
+/* När skärmen är bredare än 800px används desktop menyn annars använder vi
+oss av hamburgar-menyn. */
+
+@media screen and (min-width: 800px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+        transition: top 0.3s;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 100;
+    }
+    .banner-bild img {
+        position: relative;
+        top: 70px;
+        margin-bottom: 70px;
+
+    }
+    .nav-meny {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .meny-lank {
+        margin-left: 35px;
+    }
+
+    #logga-in {
+        margin-right: 50px;
+        border: 1px solid #2f97ff;
+        height: 30px;
+        width: 100px;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .logga {
+        margin-top: 0;
+    }
+
+    .meny-mobil {
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .banner-bild p {
+        display: none;
+    }
+    .banner-bild h2 {
+        display: none;
+    }
+    .banner-bild button {
+        display: none;
+    }
+    #logga-in {
+        border: 1px solid #2f97ff;
+        height: 30px;
+        width: 100px;
+        text-align: center;
+        padding-top: 5px;
+        margin: auto 10px;
+    }
+    #bli-medlem {
+        display: inline-block;
+        border: 1px solid #2f97ff;
+        height: 30px;
+        width: 100px;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+@media screen and (max-width: 410px) {
+    .form {
+        width: 80%;
+    }
+    .txtarea {
+        width: 200px;
+    }
+    .ansokan textarea, .ansokan input, .ansokan select {
+        width: 200px;
+    }
+    .modal-content {
+        max-width: 250px;
+    }
+    .boka {
+        width: 100%;
+    }
 }

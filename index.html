@@ -1,110 +1,220 @@
 <!doctype html>
 <html lang="sv">
 <head>
-<meta charset="utf-8">
-<link href="style.css" type="text/css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<title>X-stad kulturhus</title>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<meta charset="utf-8">
+<title>Namnlöst dokument</title>
 </head>
-
 <body>
-	<!-- Header content -->
 	<header class="header">
-		<img class="head-bild" src="xstadbilder/header-logga.png" alt="header logga">
-		<!-- Navigerings Menyn -->
-		<nav>
-			<ul class="meny">
-				<li><a href="index.html" class="active"><i class="material-icons" id="hem-logga">home</i></a></li>
-				<li><a href="Events.html">Events</a></li>
-				<li><a href="Boka.html">Boka</a></li>
-				<li><a href="#tider">Öppettider</a></li>
-			<!--	<li><a href="#information-nyheter">Om</a></li> -->
-				<li><a href="#contact">Kontakt</a></li>
-			<!--	<input type="search" placeholder="Sök.." class="search"> -->
-			</ul>
-		</nav>
-	</header>
-	<!-- All content i mitten -->
-	<main>
-		<div class="box">
-			<!-- Information om kulturhuset, exempel på en bild av ett kulturhus och googla maps. -->
-			<div class="information-nyheter">
-				<h2>X-stad kulturhus</h2>
-				<img class="framsida-kulturhus" src="xstadbilder/160610_kaken.jpg" alt="Bild på kulturhuset">
-				<p>Välkommen till X-stads kulturhus här har vi aktiviteter för stora och små. I kulturhuset hittar du ett bibliotek, café, utställningshall, teater och lokaler.
-				Du hittar oss i centrala X-stad	<a href="https://www.google.se/maps/place/Kulturhuset+K%C3%A5ken/@57.7168013,12.0140512,17z/data=!3m1!4b1!4m5!3m4!1s0x464ff470bf22a4df:0x3f357966f91d5be5!8m2!3d57.7168013!4d12.0162399">klicka här för karta</a></p>
-				<p>Byggdes år 1950 lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend mauris sit amet tortor imperdiet, ultrices mattis tortor suscipit. Fusce gravida odio at consectetur vulputate. In non cursus justo. Quisque scelerisque, nisl tempus ullamcorper pharetra, eros ex euismod lacus, vel venenatis mauris massa sed mauris. Aliquam erat volutpat. Nullam sed dolor quis magna lacinia sodales id in neque. In id facilisis quam. Morbi quis magna a eros posuere aliquet. </p>
-				<p>Här arrangeras till exempel konserter, utställningar, föredrar, författarbesök, föreningskvällar och filmvisningar och många fler aktiviteter. Vad som händer kan du se i <a href="#">Event kalendern</a></p>
+			<nav class="nav" id="nav">
+				<span class="meny-mobil" id="js-meny-logga">
+						<i class="fas fa-bars"></i>
+				</span>
+				<a href="#" class="logga">X-GYM</a>
+				<ul class="nav-meny" id="js-mobil">
+					<li>
+						<a href="priser.html" class="meny-lank">Priser</a>
+					</li>
+					<li>
+						<a href="boka.html" class="meny-lank">Boka</a>
+					</li>
+					<li>
+						<a href="kampanjer.html" class="meny-lank">Erbjudande</a>
+					</li>
+					<li>
+						<a href="faq.html" class="meny-lank">FAQ</a>
+					</li>
+					<li>
+						<a href="#footer" class="meny-lank">Kontakta oss</a>
+					</li>
+				</ul>
+			<div class="header-knappar">
+				<button class="meny-lank modal-button" id="logga-in" name="#myModal2">Logga in</button>
+				<button class="modal-button" id="bli-medlem" name="#myModal1">Bli medlem</button>
 			</div>
-			<div class="schema">
-				<div class="veckoplanering">
-					<h3>  v.50 på kulturhuset</h3>
-					<ul>
-					
-						<li class="veckodag">
-							<h4>Måndag</h4>
-							<p><a href="#">Pyssel, Julpynt</a> 12.00-16.00</p>
-						</li>
-						<li class="veckodag">
-							<h4>Tisdag</h4>
-						<p><a href="#">XXXX Teater</a> 17.00-18.00</p>
-						</li>
-						<li class="veckodag">
-							<h4>Onsdag</h4>
-							<p>...</p>
-						</li>
-						<li class="veckodag">
-							<h4>Torsdag</h4>
-							<p>...</p>
-						</li>
-						<li class="veckodag">
-							<h4>Fredag</h4>
-							<p><a href="#">Pysselkväll, Julpynt</a> 16.00-20.00</p>
-						</li>
-						<li class="veckodag">
-							<h4>Lördag</h4>
-							<p><a href="#">XXX Utställning</a> Hela dagen</p>
-						</li>
-						<li class="veckodag">
-							<h4>Söndag</h4>
-							<p><a href="#">XXXX teater</a> 18.00-20.00</p>
-						</li>
-					</ul>
+			</nav>
+	</header>
+
+	<main class="main">
+			<!--Bilderna för headern-->
+			<div class="banner-bild">
+				<img src="bilder/pexels-photo-841130(1).jpeg" alt="Banner bild">
+					<div class="banner-text"><h2>X-GYM</h2>
+					<p>Kom igång med träningen hos oss</p>
+					<button class="bild-medlem modal-button" name='#myModal1'>BLI MEDLEM</button>
+				</div>
+			</div>
+			<!-- Nyhetsbrev sign up istället? -->
+		<div class="medlemskap">
+			<div class="medlem">
+				<h2>Skaffa månadskort</h2>
+				<p>Vi erbjuder många olika träningspass och moderna maskiner.
+				Till det Lägsta priset.</p>
+				<button class="bild-medlem" id="medlemskap-knapp">Ansök</button>
+				<p></p>
+			</div>
+			<div class="prov">
+				<h2>Provträna gratis!</h2>
+				<p>Just nu erbjuder vi kostnadsfri träning i en vecka. Läs mer om erbjudandet här</p>
+				<button class="bild-medlem" id="prov-knapp">Provträna</button>
+			</div>
+		</div>
+		<h2 class="nyheter-title">Nyheter</h2>
+		<div class="nyheter">
+			<div class="first-nyhet">
+				<img class="nyhet-img" src="bilder/halvboll.jpg" alt="Bild på nyhet">
+				<h3>Ny gruppträning "halvboll stå konstigt."</h3>
+				<p class="text-nyhet">Denna nya träningsmetod är...
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Fusce consequat magna quis dolor feugiat maximus. Morbi massa enim, 
+						elementum vel. </p>
+				<button class="las-mer" id="nyhet1-knapp">Läs mer</button>
+			</div>
+			<div class="second-nyhet">
+				<img class="nyhet-img" src="bilder/knacka.jpg" alt="Bild på nyhet">
+				<h3>Testa nya gruppträningen "knäcka fingret"</h3>
+				<p class="text-nyhet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Fusce consequat magna quis dolor feugiat maximus. Morbi massa enim, 
+						elementum vel ante id, imperdiet viverra eros.</p>
+				<button class="las-mer" id="nyhet2-knapp">Läs mer</button>
+			</div>
+		</div>
+		<h2 class="boka-traning">Våra träningspass</h2>
+		<div class="boka-container">
+			<div class="boka">
+				<div class="boka-item">
+					<img class="boka-bild" src="bilder/aer.jpeg" alt="Bild på gruppträning">
+					<div class="bild-info">
+						<h2 class="bild-title">Aerobics</h2>
+						<p class="info-text">	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum dictum mauris at dapibus. Integer. </p>
+					</div>
+				</div>
+			</div>
+			<div class="boka">
+				<div class="boka-item">
+					<img class="boka-bild" src="bilder/yoga.jpeg" alt="Bild på gruppträning">
+					<div class="bild-info">
+						<h2 class="bild-title">Yoga</h2>
+						<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat lectus a orci commodo, euismod.  </p>
+					</div>
+				</div>
+			</div>
+			<div class="boka">
+				<div class="boka-item">
+					<img class="boka-bild" src="bilder/löpning.jpeg" alt="Bild på gruppträning">
+					<div class="bild-info">
+						<h2 class="bild-title">Löpning med coach</h2>
+						<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec tellus risus. Curabitur vitae risus. </p>
+					</div>
+				</div>
+			</div>
+			<div class="boka">
+				<div class="boka-item">
+					<img class="boka-bild" src="bilder/rod.jpeg" alt="Bild på gruppträning">
+					<div class="bild-info">
+						<h2 class="bild-title">Rodd Gruppträning</h2>
+						<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris nec ante dignissim tempor. </p>
+					</div>
+				</div>
+			</div>
+			<div class="boka">
+				<div class="boka-item">
+					<img class="boka-bild" src="bilder/Pure-strength.jpeg" alt="Bild på gruppträning">
+					<div class="bild-info">
+						<h2 class="bild-title">Pure Strenght Gruppträning</h2>
+						<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu suscipit odio. Fusce rhoncus suscipit. </p>
+					</div>
+				</div>
+			</div>
+			<div class="boka">
+				<div class="boka-item">
+					<img class="boka-bild" src="bilder/gravid-yoga.jpeg" alt="Bild på gruppträning">
+					<div class="bild-info">
+						<h2 class="bild-title">Gravid Yoga</h2>
+						<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at diam lacinia, luctus tortor ut. </p>
+					</div>
+				</div>
+			</div>
+			<div class="boka">
+				<div class="boka-item">
+					<img class="boka-bild" src="bilder/diet.jpeg" alt="Bild på gruppträning">
+					<div class="bild-info">
+						<h2 class="bild-title">Dietist</h2>
+						<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id eros nibh. Maecenas lacinia sollicitudin. </p>
+					</div>
+				</div>
+			</div>
+			<div class="boka">
+				<div class="boka-item">
+					<img class="boka-bild" src="bilder/PT.jpeg" alt="Bild på gruppträning">
+					<div class="bild-info">
+						<h2 class="bild-title">Personlig Tränare</h2>
+						<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida mi nec tristique hendrerit. Ut. </p>
+					</div>
 				</div>
 			</div>
 		</div>
-			<!-- Lite nyheter med bilder. -->
-		<div id="nyheter">
-			<div class="teater-nyhet">
-				<img class="nyhets-logga" src="xstadbilder/babb-log.png" alt="Babblare logga">
-				<p>20 dec kommer den populära barnteatern babblarna kommer till kulturhuset. <a href="#">Boka</a> så snart som möjligt.</p>
-			</div>
-			<div class="cafe-nyhet">
-				<img class="cafe-logga" src="xstadbilder/Namnlöst-1.png" alt="Vegan logga">
-				<p>Nu är cafét, vegetarisk och vegan vänligt. Välkommen in för att testa våran nya meny.</p>
-			</div>
-			<div class="pyssel-nyhet">
-				<img class="pyssel-logga" src="xstadbilder/pys-log.jpg" alt="Pyssel logga">
-				<p>Vi har julpyssel varje måndag och fredag för stora och små under hela December.</p>
-			</div>
-		</div>
 	</main>
-	<!-- Content längst ner. -->
-	<footer>
-		<!-- Kontaktinformationen använder små loggor med. -->
-		<div id="contact">
-			<h2>Kontakta oss</h2>
-			<p><i class="material-icons">phone</i> 0707-070707</p>
-			<p><i class="material-icons">mail</i> info@kulturhuset.se</p>
-			<p><i class="material-icons">location_on</i> Kulturvägen 54, 412 66 X-stad, Sverige</p>
+
+	<footer class="footer" id="footer">
+		<div class="mailform">
+			<h2 class="kontakt-title">Kontakta oss</h2>
+			<div id="kontakt-laddare"></div>
+			<form class="form" onsubmit="return testaForm()" action="#" method="POST">
+					<p><input id="kontaktnamn" type="text" name="kontaktnamn" placeholder="Namn"></p>
+					<p><input id="kontaktemail" type="email" name="kontaktemail" placeholder="E-mail"></p>
+					<p><textarea name="kontakttxtarea" class="txtarea" id="kontakttxtarea" placeholder="Skriv ditt meddelande här"></textarea></p>
+					<p><input class="kontakt-knapp" type="submit" value="Skicka"></p>
+			</form>
 		</div>
-		<div id="tider">
-			<h2>Öppettider</h2>
-			<p>Måndag-torsdag: 08.00-20.00</p>
-			<p>Fredag-lördag: 10.00-22.00</p>
-			<p>Söndag: 10.00-20.00</p>
-			<p>Kan vara öppet längre under speciella dagar.</p>
-		</div>	
+		<div class="kontakt">
+			<p><i class="fas fa-phone"></i> 080-08080808</p>
+			<p><i class="fas fa-envelope"></i> info@xgym.se</p>
+			<p><i class="fas fa-map-marker-alt"></i>Xstadgatan 8 <br> 123 45 Xstad</p>
+			<p><i class="fas fa-map-marker-alt"></i>Ystadgatan 77 <br> 123 45 Ystad</p>
+		</div>
+		<div class="social">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+		</div>
+
 	</footer>
+	<div id="myModal2" class="modal">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<span class="close">×</span>		
+		<h2 class="login-header">LOGGA IN</h2>
+		</div>
+			<div id="login-laddare"></div>
+      <form id="login-form" onsubmit="return testaLogin()" action="#" method="POST">
+				<p><input type="email" id="loginemail" placeholder="E-mail"></p>
+				<p><input type="password" id="loginpassword" placeholder="Lösenord"></p>
+		<p><input class="form-login-knapp" type="submit" value="Logga in"></p>
+		<p><a href="#" class="glomt-losenord">Glömt lösenord</a></p>
+    	</form>
+	  </div>
+	</div>
+	<div id="myModal1" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">×</span>		
+				<h2 class="reg-header">BLI MEDLEM</h2>
+				</div>
+			<div id="register-laddare"></div>
+			<form id="register-form" onsubmit="return testaRegister()" action="#" method="POST">
+				<p><input class="for-efternamn" id="registerfnamn" type="text" placeholder="Förnamn"></p>
+				<p><input class="for-efternamn" id="registerenamn" type="text" placeholder="Efternamn"></p>
+				<p><input type="email" id="registeremail" placeholder="E-mail"></p>
+				<p><input type="password" id="onepassword" placeholder="Lösenord"></p>
+				<p><input type="password" id="twopassword" placeholder="Lösenord igen"></p>
+				<p><input class="form-register-knapp" type="submit" value="Bli medlem"></p>
+			</form>
+			</div>
+		</div>
+<script src="main.js"></script>
 </body>
 </html>
